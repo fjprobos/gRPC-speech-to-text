@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message Number {
+    float value = 1;
+}
+
+message Word {
+    string value = 1;
+}
+
+service calculator {
+    rpc SquareRoot(Number) returns (Number) {}
+}
+
+service wordInverter {
+    rpc Invert(Word) returns (Word) {}
+}
